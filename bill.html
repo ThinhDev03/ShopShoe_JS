@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+
+<body>
+  <div class="main">
+    <header style="z-index: 1" class="header">
+      <div class="grid">
+        <div class="header__wrapper">
+          <a href="./index.html" class="header__logo">
+            <img class="header__logo-img" src="https://logos-marques.com/wp-content/uploads/2020/04/Nike-logo.png"
+              alt="" />
+            <span class="header__logo-brand">NIKE</span>
+          </a>
+
+          <div class="header__navbar">
+            <a href="./index.html" class="header__navbar-link">home</a>
+            <a href="" class="header__navbar-link">about</a>
+            <a href="#" class="header__navbar-link">bills</a>
+          </div>
+
+          <a href="./cart.html" class="header__cart">
+            <i class="fa-solid fa-cart-shopping header__cart-icon"></i>
+            <span class="header__cart-qnt"></span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <div class="cart-wrap">
+      <div class="grid wide">
+        <form id="form-list-order" action="">
+          <table>
+            <thead class="cart__head--active">
+              <tr>
+                <th style="text-align: center">Code</th>
+                <th>Customer Name</th>
+                <th>Date</th>
+                <th>Item Numbers</th>
+                <th>Total Quantity</th>
+                <th>Total Price</th>
+                <th>Return</th>
+              </tr>
+            </thead>
+            <tbody id="order-cart-list">
+            </tbody>
+          </table>
+          <div class="cart__control"></div>
+        </form>
+        <a href="index.html" class="cart__control-back">
+          <i class="fa-solid fa-arrow-left"></i>
+          back
+        </a>
+      </div>
+      <div class="overlay__bill"></div>
+      <div class="detail-bill-wrapp">
+        <h3 class="detail-bill__heading">Thông tin đơn hàng</h3>
+        <p class="detail-bill__info">Họ và tên:</p>
+        <p class="detail-bill__info">Email:</p>
+        <p class="detail-bill__info">SĐT:</p>
+        <p class="detail-bill__info">Địa chỉ:</p>
+        <p class="detail-bill__info">Ghi chú:</p>
+        <h3 class="detail-bill__heading">Thông tin sản phẩm</h3>
+        <ul class="detail-bill-list">
+          <li class="detail-bill-list__item">
+            <img src="./img/empty-cart.png" alt="" class="detail-bill-list__item-img" />
+            <div class="detail-bill-list__wrap">
+              <h4 class="name__product">Giày da</h4>
+              <span class="product__quantity">Quantity: 3</span>
+            </div>
+          </li>
+        </ul>
+        <p class="total__price">Tổng tiền:</p>
+      </div>
+      <div class="toast-cart">
+        <span class="toast-mesage-cart">Sản phẩm đã bị xóa</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/product.js"></script>
+  <script src="../js/bill.js"></script>
+</body>
+
+</html>

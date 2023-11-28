@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+
+<body>
+  <div class="main">
+    <header style="z-index: 1" class="header">
+      <div class="grid">
+        <div class="header__wrapper">
+          <a href="./index.html" class="header__logo">
+            <img class="header__logo-img" src="https://logos-marques.com/wp-content/uploads/2020/04/Nike-logo.png"
+              alt="" />
+            <span class="header__logo-brand">NIKE</span>
+          </a>
+
+          <div class="header__navbar">
+            <a href="./index.html" class="header__navbar-link">home</a>
+            <a href="" class="header__navbar-link">about</a>
+            <a href="./bill.html" class="header__navbar-link">bills</a>
+          </div>
+
+          <div class="header__cart">
+            <i class="fa-solid fa-cart-shopping header__cart-icon"></i>
+            <span class="header__cart-qnt"></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- cart-wrap-has--no-cart -->
+    <div class="cart-wrap">
+      <div class="grid wide">
+        <div class="cart-empty">
+          <img src="../img/empty-cart.png" alt="" class="cart-empty-img" />
+        </div>
+        <form id="form-list-order" action="">
+          <table>
+            <thead class="cart__head--active">
+              <tr>
+                <th>Product name</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+                <th>Total</th>
+                <th>Clear Cart</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+
+          <span class="cart__finally-total">Total: $12.600</span>
+
+          <div class="cart__control">
+            <button class="cart__control-buy">Buy</button>
+          </div>
+        </form>
+        <a href="index.html" class="cart__control-back">
+          <i class="fa-solid fa-arrow-left"></i>
+          back
+        </a>
+      </div>
+      <div class="toast-cart">
+        <span class="toast-mesage-cart">Sản phẩm đã bị xóa</span>
+      </div>
+    </div>
+
+    <div style="z-index: 3" class="model hidden">
+      <div class="overlay"></div>
+
+      <div class="body">
+        <form id="register-form" class="form" action="">
+          <div class="form__header">
+            <h3 class="form__heading">Thông tin người mua</h3>
+            <i class="fa-solid fa-xmark form__header-icon"></i>
+          </div>
+
+          <div class="form__wrapper">
+            <span class="form__name">
+              Họ và tên
+              <i class="fa-regular fa-asterisk form__name-icon"></i>
+            </span>
+            <div class="form__group-wrap">
+              <div class="form__group">
+                <input id="firstname" name="firstname" rules="required|checkName" type="text" class="form__fullname"
+                  placeholder="Họ" />
+                <span class="erro-message"></span>
+              </div>
+              <div class="form__group">
+                <input id="lastname" name="lastname" rules="required|checkName" type="text" rules="required"
+                  class="form__fullname" placeholder="Tên" />
+                <span class="erro-message"></span>
+              </div>
+            </div>
+
+            <div class="form__group">
+              <span class="form__name">
+                Email
+                <i class="fa-regular fa-asterisk form__name-icon"></i>
+              </span>
+              <input id="email" name="email" rules="email|checkEmail" type="text" class="form__input"
+                placeholder="Email" />
+              <span class="erro-message"></span>
+            </div>
+            <div class="form__group">
+              <span class="form__name">
+                Số điện thoại
+                <i class="fa-regular fa-asterisk form__name-icon"></i>
+              </span>
+              <input id="phone" name="phone" rules="phone|min:10|checkPhone" type="text" class="form__input"
+                placeholder="Số điện thoại" />
+              <span class="erro-message"></span>
+            </div>
+            <div class="form__group-box">
+              <div class="form__group">
+                <select rules="province" id="province" name="province" id="" class="form-select">
+                  <option value="">-- Chọn Tỉnh/Thành Phố --</option>
+                </select>
+                <span class="erro-message"></span>
+              </div>
+              <div class="form__group">
+                <select rules="district" id="district" name="district" id="" class="form-select">
+                  <option value="">-- Chọn Huyện/Quận --</option>
+                </select>
+                <span class="erro-message"></span>
+              </div>
+              <div class="form__group">
+                <select rules="ward" id="ward" name="ward" id="" class="form-select">
+                  <option value="">-- Chọn Phường/Xã --</option>
+                </select>
+                <span class="erro-message"></span>
+              </div>
+            </div>
+            <div class="form__group">
+              <span class="form__name">Số nhà</span>
+              <input rules="home|checkPhone" id="sonha" name="sonha" type="text" class="form__input"
+                placeholder="Số nhà" />
+              <span class="erro-message"></span>
+            </div>
+            <div class="form__group">
+              <span class="form__name">Lời nhắn</span>
+              <textarea rules="optional" id="message" class="form__message-box" name="message"
+                placeholder="Message"></textarea>
+            </div>
+
+            <div class="form__control">
+              <button id="control-exit" class="form__control-btn">Hủy</button>
+              <button id="sumit-form" class="form__control-btn">
+                Xác nhận
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/product.js"></script>
+  <script src="../js/validate.js"></script>
+  <script src="../js/cart.js"></script>
+</body>
+
+</html>
